@@ -1,0 +1,127 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:dependableiot:fallcurve:PC;1",
+  "@type": "Interface",
+  "displayName": "Fall Curve Properties and Commands",
+  "description": "Fall Curve Component for Properties and Commands",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "toggleFingerprintCollection",
+      "displayName": "Collect Fall Curve",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "evaluateCollectedFingerprint",
+      "displayName": "Evaluate Fall Curve",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "evaluateFingerprintMethod",
+      "displayName": "Evaluate fingerprint using supervised ML",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "uARTLogging",
+      "displayName": "Logging on UART",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "telemetryToSensorMapping",
+      "displayName": "Mapping of Telemetry Names to Sensor Names",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+            "name": "telemetryName", 
+            "schema": "string"
+        },
+        "mapValue": {
+            "name": "sensorName", 
+            "schema": "string"
+        }
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "sensorMismatchCorrectionCapability",
+      "displayName": "Sensor Mismtach Correction Capability",
+      "schema": "boolean"
+    },
+    {
+      "@type": "Command",
+      "name": "clearGoldenFallCurveDB",
+      "displayName":"Clear Golden Fall Curve DB",
+      "comment": "This command will clear golden Fall Curve DB stored in flash"
+    },
+    {
+      "@type": "Command",
+      "name": "collectGoldenFallCurve",
+      "displayName": "Collect Golden Fall Curves",
+      "request": {
+        "name": "collectionSettings",
+        "displayName": "Collection Settings",
+        "description": "Object with fingerprint name and ground truth label",
+        "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                  "name": "fingerprintName",
+                  "displayName": "Fingerprint Name",
+                  "schema": "string"
+              },
+              {
+                "name": "sensorConnected",
+                "displayName": "Name of connected sensor",
+                "schema": "string"
+              }
+            ]
+        }
+      },
+      "response": {
+          "name": "goldenFallCurveString",
+          "displayName": "Collected and stored Golden Fall Curve in CSV string",
+          "schema": "string"
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "collectDataset",
+      "request": {
+          "name": "CollectionSettings",
+          "displayName": "Collection Settings",
+          "description": "Object with fingerprint name, ground truth label and number of data points to be collected",
+          "schema": {
+              "@type": "Object",
+              "fields": [
+                {
+                  "name": "fingerprintName",
+                  "displayName": "Fingerprint Name",
+                  "schema": "string"
+                },
+                {
+                  "name": "sensorConnected",
+                  "schema": "string"
+                },
+                {
+                  "name": "dataPoints",
+                  "schema": "string"
+                }
+              ]
+          }
+      },
+      "response": {
+          "name": "datsetCollectionACK",
+          "displayName": "Number of datapoints collected",
+          "schema": "integer"
+      }
+    }
+  ]
+}

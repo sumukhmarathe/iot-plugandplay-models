@@ -1,0 +1,33 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:dependableiot:fallcurve:telemetry;1",
+  "@type": "Interface",
+  "displayName": "Fall Curve Telemetry",
+  "description": "Fall Curve Component for Telemetries",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "fallCurveString",
+      "displayName" : "Fall Curve in CSV string",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "associatedTelemetry", 
+      "displayName" : "Telemetry to which this Fall Curve is associated",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "telemetryStatus",
+      "displayName" : "Status of Telemetry to which this Fall Curve is associated",
+      "schema": "boolean"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "sensorDetected", 
+      "displayName" : "Sensor detected on Port, based on FallCurve classification",
+      "schema": "string"
+    }
+  ]
+}

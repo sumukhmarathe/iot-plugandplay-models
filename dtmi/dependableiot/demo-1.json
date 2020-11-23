@@ -1,0 +1,37 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:dependableiot:demo;1",
+  "@type": "Interface",
+  "displayName": "DependableIoT Demo",
+  "description": "Dependable IoT Demo with Azure RTOS + PnP",
+  "contents": [
+    {
+      "@type" : "Component",
+      "schema": "dtmi:dependableiot:demo:device;1",
+      "name": "device",
+      "displayName": "Device Sensors",
+      "description": "Existing Device Component"
+    },
+    {
+      "@type" : "Component",
+      "schema": "dtmi:dependableiot:fallcurve:telemetry;1",
+      "name": "fingerprint1",
+      "displayName": "Fingerprint 1",
+      "description": "Fingerprint of type Fall Curve"
+    },
+    {
+      "@type" : "Component",
+      "schema": "dtmi:dependableiot:fallcurve:telemetry;1",
+      "name": "fingerprint2",
+      "displayName": "Fingerprint 2",
+      "description": "Fingerprint of type Fall Curve"
+    },
+    {
+      "@type" : "Component",
+      "schema": "dtmi:dependableiot:fallcurve:PC;1",
+      "name": "dependabilityPropertiesCommands",
+      "displayName": "Dependability Properties Commands",
+      "description": "Properties and Commands required for configuring dependability"
+    }
+  ]
+}
