@@ -1,6 +1,6 @@
 {
   "@context": "dtmi:dtdl:context;2",
-  "@id": "dtmi:dependableiot:fallcurve:telemetry;1",
+  "@id": "dtmi:azure:verifiedtelemetry:fingerprints:fallcurve:telemetry;1",
   "@type": "Interface",
   "displayName": "Fall Curve Telemetry",
   "description": "Fall Curve Component for Telemetries",

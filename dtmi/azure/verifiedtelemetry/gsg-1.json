@@ -1,0 +1,37 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:azure:verifiedtelemetry:gsg;1",
+  "@type": "Interface",
+  "displayName": "Verified Telemetry Getting Started Guide",
+  "description": "Verified Telemetry Sample",
+  "contents": [
+    {
+      "@type" : "Component",
+      "schema": "dtmi:azure:verifiedtelemetry:sample:device;1",
+      "name": "device",
+      "displayName": "Device Sensors",
+      "description": "Existing Device Component"
+    },
+    {
+      "@type" : "Component",
+      "schema": "dtmi:azure:verifiedtelemetry:fingerprints:fallcurve:telemetry;1",
+      "name": "fingerprint1",
+      "displayName": "Fingerprint 1",
+      "description": "Fingerprint of type Fall Curve"
+    },
+    {
+      "@type" : "Component",
+      "schema": "dtmi:azure:verifiedtelemetry:fingerprints:fallcurve:telemetry;1",
+      "name": "fingerprint2",
+      "displayName": "Fingerprint 2",
+      "description": "Fingerprint of type Fall Curve"
+    },
+    {
+      "@type" : "Component",
+      "schema": "dtmi:azure:verifiedtelemetry:fingerprints:fallcurve:settings;1",
+      "name": "fallCurvePropertiesCommands",
+      "displayName": "FallCurve Properties Commands",
+      "description": "Properties and Commands required for configuring FallCurves"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "@context": "dtmi:dtdl:context;2",
-  "@id": "dtmi:dependableiot:demo:device;1",
+  "@id": "dtmi:azure:verifiedtelemetry:sample:device;1",
   "@type": "Interface",
   "displayName": "Device Sensors",
   "description": "Device Sensors",

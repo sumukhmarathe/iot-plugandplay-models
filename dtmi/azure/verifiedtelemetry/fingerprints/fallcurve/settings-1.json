@@ -1,6 +1,6 @@
 {
   "@context": "dtmi:dtdl:context;2",
-  "@id": "dtmi:dependableiot:fallcurve:PC;1",
+  "@id": "dtmi:azure:verifiedtelemetry:fingerprints:fallcurve:settings;1",
   "@type": "Interface",
   "displayName": "Fall Curve Properties and Commands",
   "description": "Fall Curve Component for Properties and Commands",
